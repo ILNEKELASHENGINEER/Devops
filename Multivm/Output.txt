@@ -1,0 +1,484 @@
+prabh@LAPTOP-6NQSRER1 MINGW64 /e/vagrant-vms/multivm
+$ ls
+Vagrantfile
+
+prabh@LAPTOP-6NQSRER1 MINGW64 /e/vagrant-vms/multivm
+$ vagrant up
+Bringing machine 'web01' up with 'virtualbox' provider...
+Bringing machine 'web02' up with 'virtualbox' provider...
+Bringing machine 'db03' up with 'virtualbox' provider...
+There are errors in the configuration of this machine. Please fix
+the following errors and try again:
+
+vm:
+* Network type 'private network' is invalid. Please use a valid network type.
+
+
+prabh@LAPTOP-6NQSRER1 MINGW64 /e/vagrant-vms/multivm
+$ vagrant up
+Bringing machine 'web01' up with 'virtualbox' provider...
+Bringing machine 'web02' up with 'virtualbox' provider...
+Bringing machine 'db03' up with 'virtualbox' provider...
+==> web01: Importing base box 'ubuntu/focal64'...
+==> web01: Matching MAC address for NAT networking...
+==> web01: Checking if box 'ubuntu/focal64' version '20240416.0.0' is up to date...
+==> web01: Setting the name of the VM: multivm_web01_1714630121292_30704
+==> web01: Fixed port collision for 22 => 2222. Now on port 2200.
+==> web01: Clearing any previously set network interfaces...
+==> web01: Preparing network interfaces based on configuration...
+    web01: Adapter 1: nat
+    web01: Adapter 2: hostonly
+==> web01: Forwarding ports...
+    web01: 22 (guest) => 2200 (host) (adapter 1)
+==> web01: Running 'pre-boot' VM customizations...
+==> web01: Booting VM...
+==> web01: Waiting for machine to boot. This may take a few minutes...
+    web01: SSH address: 127.0.0.1:2200
+    web01: SSH username: vagrant
+    web01: SSH auth method: private key
+    web01:
+    web01: Vagrant insecure key detected. Vagrant will automatically replace
+    web01: this with a newly generated keypair for better security.
+    web01:
+    web01: Inserting generated public key within guest...
+    web01: Removing insecure key from the guest if it's present...
+    web01: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> web01: Machine booted and ready!
+==> web01: Checking for guest additions in VM...
+    web01: The guest additions on this VM do not match the installed version of
+    web01: VirtualBox! In most cases this is fine, but in rare cases it can
+    web01: prevent things such as shared folders from working properly. If you see
+    web01: shared folder errors, please make sure the guest additions within the
+    web01: virtual machine match the version of VirtualBox you have installed on
+    web01: your host and reload your VM.
+    web01:
+    web01: Guest Additions Version: 6.1.50
+    web01: VirtualBox Version: 7.0
+==> web01: Setting hostname...
+==> web01: Configuring and enabling network interfaces...
+==> web01: Mounting shared folders...
+    web01: /vagrant => E:/vagrant-vms/multivm
+==> web02: Importing base box 'ubuntu/focal64'...
+==> web02: Matching MAC address for NAT networking...
+==> web02: Checking if box 'ubuntu/focal64' version '20240416.0.0' is up to date...
+==> web02: Setting the name of the VM: multivm_web02_1714630177555_31138
+==> web02: Fixed port collision for 22 => 2222. Now on port 2201.
+==> web02: Clearing any previously set network interfaces...
+==> web02: Preparing network interfaces based on configuration...
+    web02: Adapter 1: nat
+    web02: Adapter 2: hostonly
+==> web02: Forwarding ports...
+    web02: 22 (guest) => 2201 (host) (adapter 1)
+==> web02: Running 'pre-boot' VM customizations...
+==> web02: Booting VM...
+==> web02: Waiting for machine to boot. This may take a few minutes...
+    web02: SSH address: 127.0.0.1:2201
+    web02: SSH username: vagrant
+    web02: SSH auth method: private key
+    web02: Warning: Connection reset. Retrying...
+    web02: Warning: Connection aborted. Retrying...
+    web02:
+    web02: Vagrant insecure key detected. Vagrant will automatically replace
+    web02: this with a newly generated keypair for better security.
+    web02:
+    web02: Inserting generated public key within guest...
+    web02: Removing insecure key from the guest if it's present...
+    web02: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> web02: Machine booted and ready!
+==> web02: Checking for guest additions in VM...
+    web02: The guest additions on this VM do not match the installed version of
+    web02: VirtualBox! In most cases this is fine, but in rare cases it can
+    web02: prevent things such as shared folders from working properly. If you see
+    web02: shared folder errors, please make sure the guest additions within the
+    web02: virtual machine match the version of VirtualBox you have installed on
+    web02: your host and reload your VM.
+    web02:
+    web02: Guest Additions Version: 6.1.50
+    web02: VirtualBox Version: 7.0
+==> web02: Setting hostname...
+==> web02: Configuring and enabling network interfaces...
+==> web02: Mounting shared folders...
+    web02: /vagrant => E:/vagrant-vms/multivm
+==> db03: Box 'centos/7' could not be found. Attempting to find and install...
+    db03: Box Provider: virtualbox
+    db03: Box Version: >= 0
+==> db03: Loading metadata for box 'centos/7'
+    db03: URL: https://vagrantcloud.com/centos/7
+==> db03: Adding box 'centos/7' (v2004.01) for provider: virtualbox
+    db03: Downloading: https://vagrantcloud.com/centos/boxes/7/versions/2004.01/providers/virtualbox/unknown/vagrant.box
+Download redirected to host: cloud.centos.org
+    db03:
+    db03: Calculating and comparing box checksum...
+==> db03: Successfully added box 'centos/7' (v2004.01) for 'virtualbox'!
+==> db03: Importing base box 'centos/7'...
+==> db03: Matching MAC address for NAT networking...
+==> db03: Checking if box 'centos/7' version '2004.01' is up to date...
+==> db03: Setting the name of the VM: multivm_db03_1714631219193_66706
+==> db03: Fixed port collision for 22 => 2222. Now on port 2202.
+==> db03: Clearing any previously set network interfaces...
+==> db03: Preparing network interfaces based on configuration...
+    db03: Adapter 1: nat
+    db03: Adapter 2: hostonly
+==> db03: Forwarding ports...
+    db03: 22 (guest) => 2202 (host) (adapter 1)
+==> db03: Booting VM...
+==> db03: Waiting for machine to boot. This may take a few minutes...
+    db03: SSH address: 127.0.0.1:2202
+    db03: SSH username: vagrant
+    db03: SSH auth method: private key
+    db03:
+    db03: Vagrant insecure key detected. Vagrant will automatically replace
+    db03: this with a newly generated keypair for better security.
+    db03:
+    db03: Inserting generated public key within guest...
+    db03: Removing insecure key from the guest if it's present...
+    db03: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> db03: Machine booted and ready!
+==> db03: Checking for guest additions in VM...
+    db03: No guest additions were detected on the base box for this VM! Guest
+    db03: additions are required for forwarded ports, shared folders, host only
+    db03: networking, and more. If SSH fails on this machine, please install
+    db03: the guest additions and repackage the box to continue.
+    db03:
+    db03: This is not an error message; everything may continue to work properly,
+    db03: in which case you may ignore this message.
+==> db03: Setting hostname...
+==> db03: Configuring and enabling network interfaces...
+==> db03: Rsyncing folder: /cygdrive/e/vagrant-vms/multivm/ => /vagrant
+==> db03: Running provisioner: shell...
+    db03: Running: inline script
+    db03: Loaded plugins: fastestmirror
+    db03: Determining fastest mirrors
+    db03:  * base: centos.excellmedia.net
+    db03:  * extras: centos.excellmedia.net
+    db03:  * updates: centos.excellmedia.net
+    db03: Resolving Dependencies
+    db03: --> Running transaction check
+    db03: ---> Package mariadb-server.x86_64 1:5.5.68-1.el7 will be installed
+    db03: --> Processing Dependency: mariadb-libs(x86-64) = 1:5.5.68-1.el7 for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: mariadb(x86-64) = 1:5.5.68-1.el7 for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl-DBI for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl-DBD-MySQL for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl(vars) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl(strict) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl(Sys::Hostname) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl(POSIX) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl(Getopt::Long) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl(File::Temp) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl(File::Path) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl(File::Copy) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl(File::Basename) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl(Data::Dumper) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: perl(DBI) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: libaio.so.1(LIBAIO_0.4)(64bit) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: libaio.so.1(LIBAIO_0.1)(64bit) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: /usr/bin/perl for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: --> Processing Dependency: libaio.so.1()(64bit) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    db03: ---> Package unzip.x86_64 0:6.0-24.el7_9 will be installed
+    db03: ---> Package wget.x86_64 0:1.14-18.el7_6.1 will be installed
+    db03: --> Running transaction check
+    db03: ---> Package libaio.x86_64 0:0.3.109-13.el7 will be installed
+    db03: ---> Package mariadb.x86_64 1:5.5.68-1.el7 will be installed
+    db03: --> Processing Dependency: perl(Exporter) for package: 1:mariadb-5.5.68-1.el7.x86_64
+    db03: ---> Package mariadb-libs.x86_64 1:5.5.65-1.el7 will be updated
+    db03: ---> Package mariadb-libs.x86_64 1:5.5.68-1.el7 will be an update
+    db03: ---> Package perl.x86_64 4:5.16.3-299.el7_9 will be installed
+    db03: --> Processing Dependency: perl-libs = 4:5.16.3-299.el7_9 for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl-macros for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl-libs for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(File::Spec::Unix) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(File::Spec::Functions) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(File::Spec) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Cwd) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: --> Processing Dependency: libperl.so()(64bit) for package: 4:perl-5.16.3-299.el7_9.x86_64
+    db03: ---> Package perl-DBD-MySQL.x86_64 0:4.023-6.el7 will be installed
+    db03: ---> Package perl-DBI.x86_64 0:1.627-4.el7 will be installed
+    db03: --> Processing Dependency: perl(RPC::PlServer) >= 0.2001 for package: perl-DBI-1.627-4.el7.x86_64
+    db03: --> Processing Dependency: perl(RPC::PlClient) >= 0.2000 for package: perl-DBI-1.627-4.el7.x86_64
+    db03: ---> Package perl-Data-Dumper.x86_64 0:2.145-3.el7 will be installed
+    db03: ---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed
+    db03: ---> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed
+    db03: ---> Package perl-Getopt-Long.noarch 0:2.40-3.el7 will be installed
+    db03: --> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Long-2.40-3.el7.noarch
+    db03: --> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-2.40-3.el7.noarch
+    db03: --> Running transaction check
+    db03: ---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed
+    db03: ---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed
+    db03: ---> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed
+    db03: ---> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed
+    db03: ---> Package perl-PlRPC.noarch 0:0.2020-14.el7 will be installed
+    db03: --> Processing Dependency: perl(Net::Daemon) >= 0.13 for package: perl-PlRPC-0.2020-14.el7.noarch
+    db03: --> Processing Dependency: perl(Net::Daemon::Test) for package: perl-PlRPC-0.2020-14.el7.noarch
+    db03: --> Processing Dependency: perl(Net::Daemon::Log) for package: perl-PlRPC-0.2020-14.el7.noarch
+    db03: --> Processing Dependency: perl(Compress::Zlib) for package: perl-PlRPC-0.2020-14.el7.noarch
+    db03: ---> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed
+    db03: --> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+    db03: --> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+    db03: ---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed
+    db03: --> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch
+    db03: --> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch
+    db03: ---> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed
+    db03: ---> Package perl-Socket.x86_64 0:2.010-5.el7 will be installed
+    db03: ---> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed
+    db03: ---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed
+    db03: ---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed
+    db03: ---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed
+    db03: ---> Package perl-constant.noarch 0:1.27-2.el7 will be installed
+    db03: ---> Package perl-libs.x86_64 4:5.16.3-299.el7_9 will be installed
+    db03: ---> Package perl-macros.x86_64 4:5.16.3-299.el7_9 will be installed
+    db03: ---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed
+    db03: ---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed
+    db03: --> Running transaction check
+    db03: ---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed
+    db03: ---> Package perl-IO-Compress.noarch 0:2.061-2.el7 will be installed
+    db03: --> Processing Dependency: perl(Compress::Raw::Zlib) >= 2.061 for package: perl-IO-Compress-2.061-2.el7.noarch
+    db03: --> Processing Dependency: perl(Compress::Raw::Bzip2) >= 2.061 for package: perl-IO-Compress-2.061-2.el7.noarch
+    db03: ---> Package perl-Net-Daemon.noarch 0:0.48-5.el7 will be installed
+    db03: ---> Package perl-Pod-Escapes.noarch 1:1.04-299.el7_9 will be installed
+    db03: ---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed
+    db03: --> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+    db03: --> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+    db03: ---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed
+    db03: --> Running transaction check
+    db03: ---> Package perl-Compress-Raw-Bzip2.x86_64 0:2.061-3.el7 will be installed
+    db03: ---> Package perl-Compress-Raw-Zlib.x86_64 1:2.061-4.el7 will be installed
+    db03: ---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed
+    db03: ---> Package perl-parent.noarch 1:0.225-244.el7 will be installed
+    db03: --> Finished Dependency Resolution
+    db03:
+    db03: Dependencies Resolved
+    db03:
+    db03: ================================================================================
+    db03:  Package                    Arch      Version                  Repository  Size
+    db03: ================================================================================
+    db03: Installing:
+    db03:  mariadb-server             x86_64    1:5.5.68-1.el7           base        11 M
+    db03:  unzip                      x86_64    6.0-24.el7_9             updates    172 k
+    db03:  wget                       x86_64    1.14-18.el7_6.1          base       547 k
+    db03: Installing for dependencies:
+    db03:  libaio                     x86_64    0.3.109-13.el7           base        24 k
+    db03:  mariadb                    x86_64    1:5.5.68-1.el7           base       8.8 M
+    db03:  perl                       x86_64    4:5.16.3-299.el7_9       updates    8.0 M
+    db03:  perl-Carp                  noarch    1.26-244.el7             base        19 k
+    db03:  perl-Compress-Raw-Bzip2    x86_64    2.061-3.el7              base        32 k
+    db03:  perl-Compress-Raw-Zlib     x86_64    1:2.061-4.el7            base        57 k
+    db03:  perl-DBD-MySQL             x86_64    4.023-6.el7              base       140 k
+    db03:  perl-DBI                   x86_64    1.627-4.el7              base       802 k
+    db03:  perl-Data-Dumper           x86_64    2.145-3.el7              base        47 k
+    db03:  perl-Encode                x86_64    2.51-7.el7               base       1.5 M
+    db03:  perl-Exporter              noarch    5.68-3.el7               base        28 k
+    db03:  perl-File-Path             noarch    2.09-2.el7               base        26 k
+    db03:  perl-File-Temp             noarch    0.23.01-3.el7            base        56 k
+    db03:  perl-Filter                x86_64    1.49-3.el7               base        76 k
+    db03:  perl-Getopt-Long           noarch    2.40-3.el7               base        56 k
+    db03:  perl-HTTP-Tiny             noarch    0.033-3.el7              base        38 k
+    db03:  perl-IO-Compress           noarch    2.061-2.el7              base       260 k
+    db03:  perl-Net-Daemon            noarch    0.48-5.el7               base        51 k
+    db03:  perl-PathTools             x86_64    3.40-5.el7               base        82 k
+    db03:  perl-PlRPC                 noarch    0.2020-14.el7            base        36 k
+    db03:  perl-Pod-Escapes           noarch    1:1.04-299.el7_9         updates     52 k
+    db03:  perl-Pod-Perldoc           noarch    3.20-4.el7               base        87 k
+    db03:  perl-Pod-Simple            noarch    1:3.28-4.el7             base       216 k
+    db03:  perl-Pod-Usage             noarch    1.63-3.el7               base        27 k
+    db03:  perl-Scalar-List-Utils     x86_64    1.27-248.el7             base        36 k
+    db03:  perl-Socket                x86_64    2.010-5.el7              base        49 k
+    db03:  perl-Storable              x86_64    2.45-3.el7               base        77 k
+    db03:  perl-Text-ParseWords       noarch    3.29-4.el7               base        14 k
+    db03:  perl-Time-HiRes            x86_64    4:1.9725-3.el7           base        45 k
+    db03:  perl-Time-Local            noarch    1.2300-2.el7             base        24 k
+    db03:  perl-constant              noarch    1.27-2.el7               base        19 k
+    db03:  perl-libs                  x86_64    4:5.16.3-299.el7_9       updates    690 k
+    db03:  perl-macros                x86_64    4:5.16.3-299.el7_9       updates     44 k
+    db03:  perl-parent                noarch    1:0.225-244.el7          base        12 k
+    db03:  perl-podlators             noarch    2.5.1-3.el7              base       112 k
+    db03:  perl-threads               x86_64    1.87-4.el7               base        49 k
+    db03:  perl-threads-shared        x86_64    1.43-6.el7               base        39 k
+    db03: Updating for dependencies:
+    db03:  mariadb-libs               x86_64    1:5.5.68-1.el7           base       760 k
+    db03:
+    db03: Transaction Summary
+    db03: ================================================================================
+    db03: Install  3 Packages (+37 Dependent packages)
+    db03: Upgrade             (  1 Dependent package)
+    db03:
+    db03: Total download size: 34 M
+    db03: Downloading packages:
+    db03: No Presto metadata available for base
+    db03: Public key for libaio-0.3.109-13.el7.x86_64.rpm is not installed
+    db03: warning: /var/cache/yum/x86_64/7/base/packages/libaio-0.3.109-13.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+    db03: http://centos.excellmedia.net/7.9.2009/updates/x86_64/Packages/perl-5.16.3-299.el7_9.x86_64.rpm: [Errno 14] curl#56 - "Recv failure: Connection reset by peer"
+    db03: Trying other mirror.
+    db03: Public key for perl-Pod-Escapes-1.04-299.el7_9.noarch.rpm is not installed
+    db03: http://bd.mirror.vanehost.com/CentOS/7.9.2009/os/x86_64/Packages/mariadb-server-5.5.68-1.el7.x86_64.rpm: [Errno 14] curl#56 - "Recv failure: Connection reset by peer"
+    db03: Trying other mirror.
+    db03: http://mirrors.hostever.com/centos/7.9.2009/os/x86_64/Packages/mariadb-5.5.68-1.el7.x86_64.rpm: [Errno 14] curl#56 - "Recv failure: Connection reset by peer"
+    db03: Trying other mirror.
+    db03: --------------------------------------------------------------------------------
+    db03: Total                                              1.1 MB/s |  34 MB  00:31
+    db03: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    db03: Importing GPG key 0xF4A80EB5:
+    db03:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+    db03:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+    db03:  Package    : centos-release-7-8.2003.0.el7.centos.x86_64 (@anaconda)
+    db03:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+    db03: Running transaction check
+    db03: Running transaction test
+    db03: Transaction test succeeded
+    db03: Running transaction
+    db03:   Updating   : 1:mariadb-libs-5.5.68-1.el7.x86_64                          1/42
+    db03:   Installing : 1:perl-parent-0.225-244.el7.noarch                          2/42
+    db03:   Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                           3/42
+    db03:   Installing : perl-podlators-2.5.1-3.el7.noarch                           4/42
+    db03:   Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                          5/42
+    db03:   Installing : 1:perl-Pod-Escapes-1.04-299.el7_9.noarch                    6/42
+    db03:   Installing : perl-Text-ParseWords-3.29-4.el7.noarch                      7/42
+    db03:   Installing : perl-Encode-2.51-7.el7.x86_64                               8/42
+    db03:   Installing : perl-Pod-Usage-1.63-3.el7.noarch                            9/42
+    db03:   Installing : 4:perl-macros-5.16.3-299.el7_9.x86_64                      10/42
+    db03:   Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                      11/42
+    db03:   Installing : perl-Exporter-5.68-3.el7.noarch                            12/42
+    db03:   Installing : perl-constant-1.27-2.el7.noarch                            13/42
+    db03:   Installing : perl-Socket-2.010-5.el7.x86_64                             14/42
+    db03:   Installing : perl-Time-Local-1.2300-2.el7.noarch                        15/42
+    db03:   Installing : perl-Carp-1.26-244.el7.noarch                              16/42
+    db03:   Installing : perl-Storable-2.45-3.el7.x86_64                            17/42
+    db03:   Installing : perl-PathTools-3.40-5.el7.x86_64                           18/42
+    db03:   Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 19/42
+    db03:   Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                        20/42
+    db03:   Installing : perl-File-Temp-0.23.01-3.el7.noarch                        21/42
+    db03:   Installing : perl-File-Path-2.09-2.el7.noarch                           22/42
+    db03:   Installing : perl-threads-shared-1.43-6.el7.x86_64                      23/42
+    db03:   Installing : perl-threads-1.87-4.el7.x86_64                             24/42
+    db03:   Installing : perl-Filter-1.49-3.el7.x86_64                              25/42
+    db03:   Installing : 4:perl-libs-5.16.3-299.el7_9.x86_64                        26/42
+    db03:   Installing : perl-Getopt-Long-2.40-3.el7.noarch                         27/42
+    db03:   Installing : 4:perl-5.16.3-299.el7_9.x86_64                             28/42
+    db03:   Installing : perl-Data-Dumper-2.145-3.el7.x86_64                        29/42
+    db03:   Installing : perl-Net-Daemon-0.48-5.el7.noarch                          30/42
+    db03:   Installing : perl-Compress-Raw-Bzip2-2.061-3.el7.x86_64                 31/42
+    db03:   Installing : 1:perl-Compress-Raw-Zlib-2.061-4.el7.x86_64                32/42
+    db03:   Installing : perl-IO-Compress-2.061-2.el7.noarch                        33/42
+    db03:   Installing : perl-PlRPC-0.2020-14.el7.noarch                            34/42
+    db03:   Installing : perl-DBI-1.627-4.el7.x86_64                                35/42
+    db03:   Installing : perl-DBD-MySQL-4.023-6.el7.x86_64                          36/42
+    db03:   Installing : 1:mariadb-5.5.68-1.el7.x86_64                              37/42
+    db03:   Installing : libaio-0.3.109-13.el7.x86_64                               38/42
+    db03:   Installing : 1:mariadb-server-5.5.68-1.el7.x86_64                       39/42
+    db03:   Installing : wget-1.14-18.el7_6.1.x86_64                                40/42
+    db03:   Installing : unzip-6.0-24.el7_9.x86_64                                  41/42
+    db03:   Cleanup    : 1:mariadb-libs-5.5.65-1.el7.x86_64                         42/42
+    db03:   Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                           1/42
+    db03:   Verifying  : 1:mariadb-server-5.5.68-1.el7.x86_64                        2/42
+    db03:   Verifying  : perl-threads-shared-1.43-6.el7.x86_64                       3/42
+    db03:   Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                       4/42
+    db03:   Verifying  : perl-DBD-MySQL-4.023-6.el7.x86_64                           5/42
+    db03:   Verifying  : perl-Exporter-5.68-3.el7.noarch                             6/42
+    db03:   Verifying  : perl-constant-1.27-2.el7.noarch                             7/42
+    db03:   Verifying  : perl-PathTools-3.40-5.el7.x86_64                            8/42
+    db03:   Verifying  : unzip-6.0-24.el7_9.x86_64                                   9/42
+    db03:   Verifying  : 4:perl-macros-5.16.3-299.el7_9.x86_64                      10/42
+    db03:   Verifying  : 1:perl-parent-0.225-244.el7.noarch                         11/42
+    db03:   Verifying  : perl-Socket-2.010-5.el7.x86_64                             12/42
+    db03:   Verifying  : perl-Net-Daemon-0.48-5.el7.noarch                          13/42
+    db03:   Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                        14/42
+    db03:   Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                        15/42
+    db03:   Verifying  : perl-Time-Local-1.2300-2.el7.noarch                        16/42
+    db03:   Verifying  : 1:perl-Pod-Escapes-1.04-299.el7_9.noarch                   17/42
+    db03:   Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                     18/42
+    db03:   Verifying  : perl-DBI-1.627-4.el7.x86_64                                19/42
+    db03:   Verifying  : libaio-0.3.109-13.el7.x86_64                               20/42
+    db03:   Verifying  : perl-Carp-1.26-244.el7.noarch                              21/42
+    db03:   Verifying  : 1:mariadb-libs-5.5.68-1.el7.x86_64                         22/42
+    db03:   Verifying  : perl-Data-Dumper-2.145-3.el7.x86_64                        23/42
+    db03:   Verifying  : perl-Compress-Raw-Bzip2-2.061-3.el7.x86_64                 24/42
+    db03:   Verifying  : perl-Storable-2.45-3.el7.x86_64                            25/42
+    db03:   Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 26/42
+    db03:   Verifying  : 1:perl-Compress-Raw-Zlib-2.061-4.el7.x86_64                27/42
+    db03:   Verifying  : perl-IO-Compress-2.061-2.el7.noarch                        28/42
+    db03:   Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                           29/42
+    db03:   Verifying  : perl-PlRPC-0.2020-14.el7.noarch                            30/42
+    db03:   Verifying  : perl-Encode-2.51-7.el7.x86_64                              31/42
+    db03:   Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                         32/42
+    db03:   Verifying  : perl-podlators-2.5.1-3.el7.noarch                          33/42
+    db03:   Verifying  : 4:perl-5.16.3-299.el7_9.x86_64                             34/42
+    db03:   Verifying  : perl-File-Path-2.09-2.el7.noarch                           35/42
+    db03:   Verifying  : perl-threads-1.87-4.el7.x86_64                             36/42
+    db03:   Verifying  : 1:mariadb-5.5.68-1.el7.x86_64                              37/42
+    db03:   Verifying  : perl-Filter-1.49-3.el7.x86_64                              38/42
+    db03:   Verifying  : perl-Getopt-Long-2.40-3.el7.noarch                         39/42
+    db03:   Verifying  : wget-1.14-18.el7_6.1.x86_64                                40/42
+    db03:   Verifying  : 4:perl-libs-5.16.3-299.el7_9.x86_64                        41/42
+    db03:   Verifying  : 1:mariadb-libs-5.5.65-1.el7.x86_64                         42/42
+    db03:
+    db03: Installed:
+    db03:   mariadb-server.x86_64 1:5.5.68-1.el7        unzip.x86_64 0:6.0-24.el7_9
+    db03:   wget.x86_64 0:1.14-18.el7_6.1
+    db03:
+    db03: Dependency Installed:
+    db03:   libaio.x86_64 0:0.3.109-13.el7
+    db03:   mariadb.x86_64 1:5.5.68-1.el7
+    db03:   perl.x86_64 4:5.16.3-299.el7_9
+    db03:   perl-Carp.noarch 0:1.26-244.el7
+    db03:   perl-Compress-Raw-Bzip2.x86_64 0:2.061-3.el7
+    db03:   perl-Compress-Raw-Zlib.x86_64 1:2.061-4.el7
+    db03:   perl-DBD-MySQL.x86_64 0:4.023-6.el7
+    db03:   perl-DBI.x86_64 0:1.627-4.el7
+    db03:   perl-Data-Dumper.x86_64 0:2.145-3.el7
+    db03:   perl-Encode.x86_64 0:2.51-7.el7
+    db03:   perl-Exporter.noarch 0:5.68-3.el7
+    db03:   perl-File-Path.noarch 0:2.09-2.el7
+    db03:   perl-File-Temp.noarch 0:0.23.01-3.el7
+    db03:   perl-Filter.x86_64 0:1.49-3.el7
+    db03:   perl-Getopt-Long.noarch 0:2.40-3.el7
+    db03:   perl-HTTP-Tiny.noarch 0:0.033-3.el7
+    db03:   perl-IO-Compress.noarch 0:2.061-2.el7
+    db03:   perl-Net-Daemon.noarch 0:0.48-5.el7
+    db03:   perl-PathTools.x86_64 0:3.40-5.el7
+    db03:   perl-PlRPC.noarch 0:0.2020-14.el7
+    db03:   perl-Pod-Escapes.noarch 1:1.04-299.el7_9
+    db03:   perl-Pod-Perldoc.noarch 0:3.20-4.el7
+    db03:   perl-Pod-Simple.noarch 1:3.28-4.el7
+    db03:   perl-Pod-Usage.noarch 0:1.63-3.el7
+    db03:   perl-Scalar-List-Utils.x86_64 0:1.27-248.el7
+    db03:   perl-Socket.x86_64 0:2.010-5.el7
+    db03:   perl-Storable.x86_64 0:2.45-3.el7
+    db03:   perl-Text-ParseWords.noarch 0:3.29-4.el7
+    db03:   perl-Time-HiRes.x86_64 4:1.9725-3.el7
+    db03:   perl-Time-Local.noarch 0:1.2300-2.el7
+    db03:   perl-constant.noarch 0:1.27-2.el7
+    db03:   perl-libs.x86_64 4:5.16.3-299.el7_9
+    db03:   perl-macros.x86_64 4:5.16.3-299.el7_9
+    db03:   perl-parent.noarch 1:0.225-244.el7
+    db03:   perl-podlators.noarch 0:2.5.1-3.el7
+    db03:   perl-threads.x86_64 0:1.87-4.el7
+    db03:   perl-threads-shared.x86_64 0:1.43-6.el7
+    db03:
+    db03: Dependency Updated:
+    db03:   mariadb-libs.x86_64 1:5.5.68-1.el7
+    db03:
+    db03: Complete!
+    db03: Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to /usr/lib/systemd/system/mariadb.service.
+    db03: =========================
+    db03: INSTALLATION COMPLETED
+    db03: =========================
+
+prabh@LAPTOP-6NQSRER1 MINGW64 /e/vagrant-vms/multivm
+$ vagrant ssh
+This command requires a specific VM name to target in a multi-VM environment.
+
+prabh@LAPTOP-6NQSRER1 MINGW64 /e/vagrant-vms/multivm
+$ vagrant ssh db03
