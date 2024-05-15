@@ -21,13 +21,21 @@ Further commands attached in output.txt file
 **application is developed by "VISUAL PATH" developers and the application is used for the
 purpose of learning local deployment
 
+RUNNING STATUS (vagrant global-status)
+
+![image](https://github.com/ILNEKELASHENGINEER/Devops/assets/93472619/902905ac-f302-4de7-94c7-30a2f5941a03)
+
+
 LOGIN PAGE
+
 ![image](https://github.com/ILNEKELASHENGINEER/Devops/assets/93472619/ceace0a9-ee96-4c56-8b5e-9a9aa46f7bb0)
 
 DASHBOARD (shows successfull authentication == database connection is good)
+
 ![image](https://github.com/ILNEKELASHENGINEER/Devops/assets/93472619/4c71a546-79e3-4cf2-8609-c2d97f1ed1a6)
 
 MEMCACHE
+
 ![image](https://github.com/ILNEKELASHENGINEER/Devops/assets/93472619/96665e6a-c030-4ce2-932d-58c49562bca0)
 
 ![image](https://github.com/ILNEKELASHENGINEER/Devops/assets/93472619/634fc7e1-98df-492b-9cb9-936041d66c6b)
