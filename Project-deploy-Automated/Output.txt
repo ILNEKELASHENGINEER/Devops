@@ -1,0 +1,513 @@
+   17  nano d.txt
+   18  ls
+   19  git merge branch1
+   20  git merge master
+   21  git checkout master
+   22  ls
+   23  git log --oneline --graph
+   24  git master
+   25  ls
+   26   rm c.txt
+   27  rm d.txt 
+   28  ls
+   29  git checkout branch1
+   30  ls
+   31  nano file2
+   32  mv file2.txt file2
+   33  mv file2 file2.txt
+   34  cp file2.txt file2
+   35  clear
+   36  ls
+   37  nano file2.txt
+   38  git add .
+   39  git commit -m "file2 from branch2"
+   40  git checkout master
+   41  git checkout -b branch3
+   42  ls
+   43  nano file3.txt
+   44  git add .
+   45  git commit -m "file3.txt from branch3"
+   46  git branch
+   47  git merge branch2
+   48  git checkout branch2
+   49  git merge branch1
+   50  git checkout master
+   51  git merge branch1
+   52  git log --oneline --graph
+   53  git rebase branch
+   54  git rebase branch1
+   55  git log --oneline --graph
+   56  git checkout branch3
+   57  git rebase master
+   58  git log --oneline --graph
+   59  git remote add origin https://github.com/ILNEKELASHENGINEER/osslab.git
+   60  git push
+   61  git push --all origin
+   62  git push
+   63  git add .
+   64  git commit -m "final commit"
+   65  git checkout master
+   66  git branch
+   67  git pus
+   68  git push
+   69  git push --set-upstream origin master
+   70  git pus
+   71  git push
+   72  git checkout branch3
+   73  git push
+   74  git push --set-upstream origin branch3
+   75  git push
+   76  ls
+   77  cat file1.txt
+   78  nano file1.txt
+   79  git add .
+   80  git checkout branch2
+   81  ls
+   82  cat file1.txt
+   83  cat file2.txt
+   84  nano file2.txt
+   85  git checkout master
+   86  git diff > mypatch.patch
+   87  ls
+   88  cat mypatch.patch
+   89  git apply mypatch.patch
+   90  git checkout branch2
+   91  git apply mypatch.patch
+   92  git checkout main
+   93  ls
+   94  cat mypatch.patch
+   95  cat git diff
+   96  git diff
+   97  git log
+   98  git status
+   99  git checkout branch2
+  100  ls
+  101  git commit -m "commit for patch"
+  102  git checkout master
+  103  git commit -m "new"
+  104  git status
+  105  git commit -a "hello"
+  106  git commit -a
+  107  git commit -a
+  108  clear
+  109  cd
+  110  ls
+  111  cd /d/Devops-Learning/
+  112  ls
+  113  cd GitOss/
+  114  ls
+  115  git diff
+  116  cat file1.txt
+  117  cat >>file1.txt
+  118  cat file1.txt 
+  119  git diff
+  120  rm mypatch.patch 
+  121  ls
+  122  git diff > patchfile.patch
+  123  cat patchfile.patch 
+  124  git apply patchfile.patch
+  125  git commit -m "new1 change"
+  126  git add .
+  127  git commit -m "new1 change"
+  128  git log
+  129  git log --oneling --graph
+  130  git log --oneline --graph
+  131  git log
+  132  git format-patch commit 11c72729c296c5e4b63c68ab0371649408000f9d
+  133  git format-patch -1 commit 11c72729c296c5e4b63c68ab0371649408000f9d
+  134  git format-patch -1 11c72729c296c5e4b63c68ab0371649408000f9d
+  135  git format-patch -3 11c72729c296c5e4b63c68ab0371649408000f9d
+  136  cat 0003-new1-change.patch 
+  137  git apply 0003-new1-change.patch
+  138  git apply ./0003-new1-change.patch
+  139  git apply 0001-new1-change.patch
+  140  git apply 0001-new1-change.patch
+  141  cat 0001-new1-change.patch
+  142  clear
+  143  ls
+  144  ls
+  145  cat file2.txt 
+  146  nano file2.txt 
+  147  git commit -m "file2 commit1"
+  148  git add .
+  149  git commit -m "file2 commit1"
+  150  nano file2.txt
+  151  git status
+  152  git log
+  153  git format-patch -1  30815d8f2fd223563aa66ddb86933f99fb603a10
+  154  git add .
+  155  git commit -m "file2 commit2"
+  156  git apply 0001-file2-commit1.patch
+  157  nano file2.txt 
+  158  git apply 0001-file2-commit1.patch
+  159  git diff
+  160  git diff > output.patch
+  161  git apply output.patch
+  162  cat /etc/shells
+  163  cat proc/cpuinfo
+  164  uname -a
+  165  clear
+  166  git version
+  167  git init
+  168  git commit -m "1st"
+  169  cd ..
+  170  mkdir jegan
+  171  cd jegan
+  172  clear
+  173  git init
+  174  git config --list
+  175  touch j1.txt
+  176  cat "hello" >j1.txt
+  177  cat > j1.txt
+  178  git add .
+  179  git commit -m "commit1"
+  180  git checkout -b main
+  181  cat >> j1.txt
+  182  git add .
+  183  git commit -m "2nd"
+  184  git log
+  185  git checkout -b newbr
+  186  cat >> t1.txt
+  187  git branch
+  188  git add .
+  189  git commit -m "3rd"
+  190  git log
+  191  git hard
+  192  git reset --hard bc41a7af25d1b90fbf437fc7e4cabb911dae002f
+  193  git log
+  194  git format-patch bc41a7af25d1b90fbf437fc7e4cabb911dae002f 
+  195  git format-patch bc41a7af25d1b90fbf437fc7e4cabb911dae002f
+  196  ls
+  197  git format-patch -1 bc41a7af25d1b90fbf437fc7e4cabb911dae002f
+  198  cat 0001-commit1.patch 
+  199  git branch
+  200  git switch main
+  201  ls
+  202  cat 
+  203  cat >> jl.txt
+  204  git add .
+  205  git commit
+  206  git log
+  207  git status
+  208  git branch
+  209  git switch newbr
+  210  ls
+  211  cat >> j1.txt
+  212  git merge main
+  213  git add .
+  214  git commit -m "mer"
+  215  git merge main
+  216  nano j1.txt
+  217  git merge main
+  218  git add .
+  219  git commit -m "resolved"
+  220  git merge main
+  221  git log
+  222  git branch
+  223  git merge main
+  224  git switch main
+  225  git merge master
+  226  git switch master
+  227  git merge newbr
+  228  git log --oneline
+  229  git log --oneline --graph
+  230  ls
+  231  cat >> jl.txt
+  232  git add .
+  233  git commit -m "neke"
+  234  git rebase main
+  235  git rebase newbr
+  236  git rebase newbr --continue
+  237  git switch main
+  238  git switch newbr
+  239  git rebase --quit
+  240  git switch newbr
+  241  git switch master 
+  242  git branch
+  243  git checkout
+  244  git checkout main
+  245  git status
+  246  git add .
+  247  git commit -m "6"
+  248  git switch newbr
+  249  git rebase 
+  250  git switch 85014fe
+  251  git branch temp 85014fe
+  252  git rebase master
+  253  git rebase --quit
+  254  git switch master
+  255  ls
+  256  rm j1.txt
+  257  git switch master
+  258  git add .
+  259  git commit -a
+  260  git switch master
+  261  git rebase newbr
+  262  git log --oneline --graphh
+  263  git log --oneline --graph
+  264  ftp --version
+  265  ftp eu-central-1.sftpcloud.io
+  266  ftp eu-central-1.sftpcloud.io
+  267  ftp 192.168.137.68
+  268  ftp test.rebex.net
+  269  git diff
+  270  git diff > myfirstpatch.patch
+  271  ls
+  272  cat myfirstpatch.patch
+  273  git apply myfirstpatch.patch
+  274  git status
+  275  git add .
+  276  git commit -m "just now change"
+  277  git apply myfirstpatch.patch
+  278  git status
+  279  clear
+  280  ls
+  281  echo "neke" >> j1.txt
+  282  git add .
+  283  git commit -m "neke hooks"
+  284  git commit -m "neke hooks"
+  285  echo "hello" >> j1.txt
+  286  git commit -m "neke"
+  287  git add .
+  288  git commit -m "neke"
+  289  chmod +x pre-commit
+  290  ls
+  291  ls -a
+  292  cd .git
+  293  ls
+  294  cd hooks
+  295  ls
+  296  ls -a
+  297  cat pre-commit.sample
+  298  cp pre-commit.sample pre-commit
+  299  ls
+  300  chmode +x pre-commit
+  301  chmod +x pre-commit
+  302  ls
+  303  rm pre-commit.sample
+  304  ls
+  305  cat pre-commit
+  306  cd ...
+  307  cd .. ..
+  308  cd ..
+  309  cd ..
+  310  ls
+  311  cat jl.txt
+  312  echo "hello" >> jl.txt
+  313  cat jl.txt
+  314  git add jl.txt
+  315  git commit -m "hook test1"
+  316  cd ..
+  317  mkdir neke
+  318  cd neke
+  319  git init
+  320  ls
+  321  ls -a
+  322  cd .
+  323  cd .git
+  324  ls
+  325  cd hooks
+  326  ls
+  327  cp pre-commit.sample pre-commit
+  328  ls
+  329  nano pre-commit
+  330  cd 
+  331  cd /d/Devops-Learning/neke
+  332  ls
+  333  echo "nekelash il" >> a.txt
+  334  ls
+  335  ls -a
+  336  ls -a a.txt
+  337  ls -d a.txt
+  338  ls -l a.txt
+  339  git add .
+  340  git commit -m "first commit"
+  341  ls
+  342  cd .git
+  343  ls
+  344  cd hooks
+  345  ls
+  346  chmod +x pre-commit
+  347  cd ..
+  348  cd ..
+  349  git status
+  350  git commit -m "first commit"
+  351  cd neke
+  352  ls
+  353  git commit -m "first commit"
+  354  git commit -m "first commit"
+  355  git commit -m "first commit"
+  356  touch b.txt
+  357  git add .
+  358  git commit -m "second commit"
+  359  git commit -m "second commit"
+  360  exit
+  361  chmod +x commit-msg
+  362  cd ..
+  363  cd ..
+  364  git commit -m "frs"
+  365  git init
+  366  cd .git
+  367  cd hooks
+  368  ls
+  369  mv prepare-commit-msg.sample prepare-commit-msg
+  370  ls
+  371  cat > prepare-commit-msg
+  372  cat prepare-commit-msg 
+  373  chmod +x prepare-commit-msg 
+  374  cd ..
+  375  cd ..
+  376  touch a.txt
+  377  echo "neke" >> a.txt
+  378  cat a.txt
+  379  git add .
+  380  git commit -m "nekelash"
+  381  cd .git
+  382  cd hooks
+  383  ls
+  384  mv pre-commit.sample pre-commit
+  385  cat
+  386  cat pre-commit
+  387  cat > pre-commit 
+  388  cat pre-commit 
+  389  chmod +x pre-commit 
+  390  cd ..
+  391  cd ..
+  392  ls
+  393  touch b.txt
+  394  echo "nekelash's new file" >> b.txt
+  395  git add .
+  396  git commit -m "hook test2"
+  397  cd .git
+  398  cd hooks
+  399  ls
+  400  nano pre-commit
+  401  cd ..
+  402  cd ..
+  403  git commit -m "hook test2"
+  404  git remote add origin https://github.com/ILNEKELASHENGINEER/oss-sem.git
+  405  git branch -M main
+  406  git push -u origin main
+  407  git pull
+  408  git push -u origin main
+  409  git push -u origin master
+  410  git branch --set-upstream-to=origin/main
+  411  git push -u origin main
+  412  git pull
+  413  ls
+  414  git branch
+  415  cleaar
+  416  clear
+  417  exit
+  418  touch file1.txt
+  419  echo "hello world" > file1.txt
+  420  echo "hello nekes" > file2.txt
+  421  diff file1.txt file2.txt
+  422  cmp file1.txt file2.txt
+  423  echo "hello" >file1.txt
+  424  echo "hello" >file2.txt
+  425  diff file1.txt
+  426  diff file1.txt file2.txt
+  427  cmp file1.txt file2.txt
+  428  git diff
+  429  rm file1.txt file2.txt 
+  430  ls
+  431  cmp file1.txt file2.txt
+  432  clear
+  433  cal 10 2004
+  434  cal
+  435  date
+  436  ssh 192.168.206.24
+  437  chmod 400 neke ec2.pem 
+  438  chmod 400 neke-ec2.pem 
+  439  ssh neke-ec2.pem ec2-user@54.81.11.26
+  440  ssh -i neke-ec2.pem ec2-user@54.81.11.26
+  441  ssh -i neke ec2.pem ec2-user@54.81.11.26
+  442  chm
+  443  ssh -i ecssh.pem ec2-user@34.201.166.30
+  444  vagrant global-status
+  445  vagrant global-status
+  446  cd D:/Devops-Learning/VProject
+  447  clear
+  448  ls
+  449  cd vprofile-project/
+  450  ls
+  451  cd vagrant/
+  452  ls
+  453  cd Manual_provisioning_WinMacIntel/
+  454  ls
+  455  cat Vagrantfile 
+  456  clear
+  457  git branch
+  458  clear
+  459  git config --list
+  460  clear
+  461  vagrant status
+  462  vagrant up
+  463  vagrant ssh db01
+  464  vagrant ssh db01
+  465  vagrant ssh db01
+  466  vagrant ssh mv01
+  467  vagrant ssh mc01
+  468  clear
+  469  vagrant ssh rmq01
+  470  vagrant ssh app01
+  471  vagrant ssh web01
+  472  vagrant destroy --force
+  473  vagrant global-status
+  474  clear
+  475  cd ..
+  476  ls
+  477  cd Automated_provisioning_WinMacIntel/
+  478  ls
+  479  clear
+  480  cd ..
+  481  cd .
+  482  cd .
+  483  cd
+  484  eixt
+  485  exit
+  486  ls
+  487  ls
+  488  ls -l
+  489  chmod 644 config.php
+  490  chmod 644 *
+  491  docker ps
+  492  docker ps
+  493  docker ps
+  494  systemctl status mysql
+  495  mysql -u root -p
+  496  ls
+  497  tree
+  498  exit
+  499  ls
+  500  vagrant up
+  501  vagrant up
+  502  vagrant status
+  503  vagrant halt
+  504  vagrant up
+  505  vagrant halt
+  506  vagrant destroy db01
+  507  vagrant up db01
+  508  vagrant ssh
+  509  vagrant up db01
+  510  vagrant status
+  511  vagrant ssh
+  512  vagrant ssh db01
+  513  vagrant halt db01
+  514  vagrant up
+  515  vagrant status
+  516  history >> Output.txt
+  If application admin authentication doesnt work execute the below command
+in 
+
+$ vagrant up db01
+
+$ vagrant ssh
+
+$ sudo -i
+
+# wget https://raw.githubusercontent.com/devopshydclub/vprofile-project/local-setup/vagrant/Automated_provisioning/mysql.sh
+
+# /bin/bash mysql.sh
+
