@@ -1,0 +1,36 @@
+############### COMMANDS FOR CREATE AND DELETE ##################
+
+1. To create volume
+    docker volume create [vol-name]
+2. To list local Volume
+    docker volume ls
+3. To remove volume 
+    docker volume rm [vol-name]
+4. To view the info of the volumes
+    docker volume inspect [vol-name]
+
+############### COMMANDS FOR MOUNT WITH CONTAINER ################
+
+1. create the volume first
+    docker volume create test-vol
+2. list the created containers
+    docker volume ls
+3. Attach the volume with container
+    docker run -d -it --name dev-test-cont -v test-vol:/app -p 9000:80 nginx:latest
+
+############ CREATE AND ATTACH BIND MOUNT WITH CONTAINER ##########
+
+1. Create the local directory in your machine
+  eg : create directory in f drive ==> F:\Docker-practice\volume
+2. Mount with container
+    docker run -d -it --name dev-test-cont -v F:\Docker-practice\volume:/app -p 9000:80 nginx:latest
+
+                                        (or)
+  IN NGINX
+    docker run -d -it --name dev-test-cont -v F:\Docker-practice\volume:/usr/share/nginx/html -p 9000:80 nginx:latest
+
+WE CAN MOUNT THE DIFFERENT CONTAINER WITH SAME CMD FOR MOUNTING AND RUNNING WITH DIFFERENT CONTAINERS
+  eg : 
+       docker run -d -it --name dev-test-cont1 -v F:\Docker-practice\volume:/app -p 9000:80 nginx:latest
+       docker run -d -it --name dev-test-cont2 -v F:\Docker-practice\volume:/app -p 9000:80 nginx:latest
+       docker run -d -it --name dev-test-cont3 -v F:\Docker-practice\volume:/app -p 9000:80 nginx:latest
