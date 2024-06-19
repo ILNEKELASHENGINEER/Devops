@@ -1,0 +1,25 @@
+docker login -u "username" -p "password' docker.io
+docker login
+docker tag <Image-name> <username>/<reponame>:<version>
+    eg :
+        docker tag webappimg neke904/web-page:v1
+docker push neke904/web-page:v1
+
+
+***note : "neke904/web-page:v1" this will be the image name of your local image on that name
+           only local image will be pushed to the docker hub!!!! be carefull on that
+
+now try!
+docker pull neke904/web-page:v1
+          or
+docker pull neke904/web-page:v1
+
+==> The output will be :
+        Using default tag: latest
+            v1: Pulling from neke904/test-webpage
+        Digest: sha256:cbb3c6b3b5baf558cc95ebb55e58ff08dab394d85fd729d19cc54b8c9fb9e175
+        Status: Image is up to date for neke904/test-webpage:v1
+        docker.io/neke904/test-webpage:v1
+        
+        What's next:
+            View a summary of image vulnerabilities and recommendations → docker scout quickview neke904/test-webpage:v1
