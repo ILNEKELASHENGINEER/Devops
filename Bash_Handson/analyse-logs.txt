@@ -1,0 +1,42 @@
+Log Analysis Script
+------------------------------------------------------
+Overview
+This repository contains a Bash script that analyzes system and application log files located in a specified directory. The script identifies specific error patterns and generates a report detailing the findings, including any logs modified in the last 24 hours.
+
+Features
+- Analyzes both system and application log files.
+- Searches for predefined error patterns: `error`, `notice`, and `Thread`.
+- Generates a comprehensive report on findings and any actions required based on the number of occurrences of each pattern.
+
+Prerequisites
+- Bash shell environment
+- Access to the log files located in the specified directory
+
+Directory Structure
+```
+/
+├── log_analysis.sh       # The main script for analyzing log files
+└── logs                  # Directory containing log files (application.log, system.log)
+```
+
+Usage
+1. Clone the repo
+
+2. **Set the necessary permissions for the script:**
+
+   chmod +x log_analysis.sh
+
+3. **Modify the script if required:**
+   - Ensure that `LOG_DIR` is set to the directory containing your log files.
+   - Adjust any error patterns in the `ERROR_PATTERNS` array if needed.
+
+4. **Run the script:**
+
+   ./log_analysis.sh
+
+5. **Check the report:**
+   - The report will be saved in `/d/Report.txt`. You can change this path within the script as needed.
+
+
+## Conclusion
+This script provides a simple yet effective way to analyze log files for specific error patterns and generate a readable report. Feel free to modify it to suit your specific needs and improve its functionality!
