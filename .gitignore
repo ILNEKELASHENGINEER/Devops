@@ -1,0 +1,4 @@
+terraform/terraform_ex1/.terraform.*
+terraform/terraform_ex1/.terraform
+terraform/terraform_ex1/terraform.tfstate
+terraform/terraform_ex1/terraform.tfstate.backup
